@@ -20,6 +20,14 @@ body {
     color: var(--main-color);
     letter-spacing: 0.03em;
 }
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
 .link {
     text-decoration: none;
 }
@@ -59,15 +67,50 @@ a {
     text-align: center;
 }
 /*Header*/
+.container {
+    width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0, 0px;
+    border: none;
+}
 .header {
     background: var(--accent-color);
 }
+.header-container {
+    display: flex;
+}
+.nav {
+    display: flex;
+}
+.nav-list {
+    display: flex;
+   }
+  .nav-link {
+    display: inline-block;
+    padding-top: 32px ;
+    padding-bottom: 32px;
+  }
+  .nav-list-item:not(:last-child) {
+    margin-right: 50px;
+    padding-right: 0px;
+  }
+  .contacts {
+    display: flex;
+    margin: 32px 215px 32px 344px;
+  }
+  .header-mail {
+    margin-right: 50px;
+  }
 .logo {
     font-family: var(--second-font);
     font-weight: 700;
     font-size: 26px;
     line-height: calc(31/26);
     text-decoration: none;
+    margin: 24px 93px 25px 215px;
+    min-width: 145px;
+    max-height: 31px;
 }
 .logo-first-part {
     color: var(--second-color);
@@ -132,7 +175,11 @@ a {
 /* WebStudio */
 
 .hero {
-background: var(--hero-footer-background);
+    display: block;   
+    padding: 0px, 0px;
+    margin-top: 0px;
+    background: var(--hero-footer-background);
+    height: 600px;
 }
 .hero-titel {
     color: var(--accent-color);
@@ -142,19 +189,28 @@ background: var(--hero-footer-background);
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.06em;
+    display: block;
+    width: 696px;
+    height: 120px;
+    margin: 0px auto 30px auto;
+    padding-top: 200px;
 }
 .button-order {
 font-family: inherit;
 font-weight: 700;
 font-size: 16px;
 line-height: calc(30/16);
-text-align: center;
 letter-spacing: 0.06em;
 color: var(--accent-color);
 background-color: var(--second-color);
 cursor: pointer;
 box-shadow: 0px 4px 4px var(--button-order-shadow);
 border-radius: 4px;
+display: block;
+min-width: 216px;
+min-height: 50px;
+max-width: 280px;
+margin: 0px auto;
 }
 /*Features*/
 .visually-hidden {
