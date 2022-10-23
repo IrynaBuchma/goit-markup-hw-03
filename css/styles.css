@@ -32,6 +32,9 @@ ul {
     margin: 0px;
     padding: 0px;
 }
+img {
+display: block;
+}
 .container {
     width: 1200px;
     margin-left: auto;
