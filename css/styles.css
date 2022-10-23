@@ -217,7 +217,8 @@ a {
     margin-right: auto;
 }
 .hero-container {
-    text-align: center;
+    height: 600px;
+    align: center;
 }
 .hero-title {
     color: var(--accent-color);
