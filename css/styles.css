@@ -45,22 +45,18 @@ display: block;
 .features {
     display: flex;
     padding: 94px 0px;
-    border: 1px solid red;
 }
 .what-we-do {
     display: flex;
     padding: 94px 0px;
-    border: 1px solid red;
 }
 .ourteam {
     display: flex;
     padding: 94px 0px;
-    border: 1px solid red;
 }
 .portfolio-hero {
     display: flex;
     padding: 94px 0px;
-    border: 1px solid red;
 }
 .link {
     text-decoration: none;
