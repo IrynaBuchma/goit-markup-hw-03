@@ -15,6 +15,7 @@
     --button-shadow-second: rgba(0, 0, 0, 0.08);
     --button-shadow-third: rgba(0, 0, 0, 0.12);
     --img-gap: 30px;
+    --features-item-quantity: 4;
     --img-quantity-whatwedo: 3;
     --img-quantity-ourteam: 4;
     --img-quantity-portfolio: 3;
@@ -40,7 +41,7 @@ display: block;
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0, 15px;
+    padding: 0px 15px;
 }
 .features {
     display: flex;
@@ -48,7 +49,7 @@ display: block;
 }
 .what-we-do {
     display: flex;
-    padding: 94px 0px;
+    padding: 0px 0px 94px 0px;
 }
 .ourteam {
     display: flex;
@@ -143,6 +144,8 @@ a {
     font-size: 26px;
     line-height: calc(31/26);
     text-decoration: none;
+}
+.header-logo {
     margin-right: 93px;
 }
 .logo-first-part {
@@ -183,9 +186,6 @@ a {
 .footer-container {
     display: flex;
     flex-direction: column;
-    padding-left: 15px;
-    padding-bottom: 60px;
-    padding-top: 60px;
 }
 .logo-footer {
     margin-bottom: 20px;
@@ -274,11 +274,11 @@ text-align: center;
   .features-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: var(--img-gap);
   }
   .features-item {
-    list-style: none;
-    width: 270px;
+    display: block;
+    flex-basis: calc((100% - 30px * 3) / 4);
 }
   .features-item-title {
     font-weight: 700;
@@ -300,8 +300,10 @@ text-align: center;
     display: flex;
     flex-wrap: wrap;
     gap: var(--img-gap);
-    flex-basis: calc((100% - var(--img-gap) * (var(--img-quantity-whatwedo)-1)) / var(--img-quantity-whatwedo));
   }
+  .whatwedo-item {
+    flex-basis: calc((100% - 30px * 2) / 3);
+  }  
   /*Our Team*/
 .ourteam {
     background: var(--background-color);
@@ -315,12 +317,12 @@ flex-direction: column;
     margin-top: 50px;
     flex-wrap: wrap;
     gap: var(--img-gap);
-    flex-basis: calc((100% - var(--img-gap)*(var(--img-quantity-ourteam)-1)) / var(--img-quantity-ourteam));
 }
 .ourteam-item {
     background-color: var(--accent-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    flex-basis: calc((100% - var(--img-gap)*(var(--img-quantity-ourteam)-1)) / var(--img-quantity-ourteam));
 }
 .team-member {
 padding-top: 30px;
@@ -351,6 +353,8 @@ padding-bottom: 30px;
     display: flex;
     flex-wrap: wrap;
     gap: var(--img-gap);
+}
+.portfolio-item {
     flex-basis: calc((100% - var(--img-gap) * (var(--img-quantity-portfolio)-1)) / var(--img-quantity-portfolio));
 }
 .wrapper {
